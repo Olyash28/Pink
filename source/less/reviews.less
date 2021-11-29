@@ -1,0 +1,126 @@
+.reviews {
+  background-color: @white;
+}
+
+.reviews__wrapper {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+
+
+  @media (min-width: @tablet) {
+    max-width: 620px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    padding-top: 72px;
+  }
+}
+
+.reviews__list {
+  margin-bottom: 44px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 121px;
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url("../img/icon-review-arrow-left.svg");
+      top: 50%;
+      left: 0;
+      opacity: 0.3;
+    }
+    &::after {
+      position: absolute;
+      content: url("../img/icon-review-arrow-right.svg");
+      top: 50%;
+      right: 0;
+      opacity: 0.3;
+    }
+  }
+}
+
+.reviews__item {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop) {
+    max-width: 688px;
+    margin: 0 auto;
+  }
+}
+
+.reviews__author {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 50px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @tablet) {
+    order: 2;
+    font-size: 20px;
+  }
+  @media (min-width: @desktop) {
+    font-size: 24px;
+  }
+}
+
+.reviews__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.reviews__author span {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.slider__toggles {
+  margin: 0 auto;
+  width: 56px;
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
+.slider__toggle {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(40, 54, 69, 0.3);
+  border: none;
+}
+
+.slider__toggle--current {
+  background-color: transparent;
+  border: 3px solid @bg-top;
+}

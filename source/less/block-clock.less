@@ -1,0 +1,126 @@
+.block-clock {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet) {
+    background-color: @white;
+  }
+  @media (min-width: @desktop) {
+    background-color: @bg-grey;
+  }
+}
+
+.block-clock__wrapper {
+  @media (min-width: @tablet) {
+    padding-top: 102px;
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 109px;
+    display: grid;
+    grid-template-columns: min-content 310px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    grid-template-columns: min-content 534px;
+    padding-top: 17px;
+    padding-bottom: 67px;
+    padding-left: 23px;
+  }
+}
+
+.block-clock__timer {
+  width: 238px;
+  height: 276px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image:
+    //url("../img/icon-editor-diagram-fill.svg"),
+    url("../img/icon-timer.svg");
+  background-repeat: no-repeat;
+  background-size: 238px auto;
+  background-position: center;
+
+  @media (min-width: @desktop) {
+    background-size: 298px auto;
+    width: 298px;
+    height: 345px;
+  }
+}
+
+.block-clock__24block {
+  //background-image: url("../img/icon-editor-diagram-fill.svg");
+  //background-size: 202px 202px;
+  //background-repeat: no-repeat;
+  //background-position: center;
+  margin-top: 38px;
+  width: 202px;
+  height: 202px;
+  border: 16px solid @main-red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @desktop) {
+    width: 252px;
+    height: 252px;
+    margin-top: 43px;
+  }
+}
+
+.block-clock__24 {
+  @media (min-width: @tablet) {
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 163px;
+    color: @main-red;
+    margin: 0;
+  }
+  @media (min-width: @desktop) {
+    font-size: 120px;
+    line-height: 163px;
+  }
+}
+
+.block-clock__title {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  width: 168px;
+  margin-bottom: 24px;
+
+  @media (min-width: @desktop) {
+    width: 300px;
+    line-height: 37px;
+  }
+}
+
+.block-clock__text {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 47px;
+  }
+}
+
+.block-clock__link {
+  font-size: 14px;
+  line-height: 24px;
+  color: @main-red;
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

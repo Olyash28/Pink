@@ -1,0 +1,41 @@
+.advantages {
+  background-color: @bg-grey;
+}
+
+.advantages__wrapper {
+  @media (min-width: @desktop) {
+    padding-bottom: 59px;
+  }
+}
+
+.advantages__block-text {
+  background-color: @white;
+  padding-top: 46px;
+  padding-bottom: 70px;
+  //background-image: url("../img/bg-triangle-white.svg");
+  //background-repeat: no-repeat;
+  //background-position: bottom;
+}
+
+.advantages__text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 40px;
+    line-height: 54px;
+  }
+  @media (min-width: @desktop) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.advantages__text:first-child {
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 22px;
+  }
+}
