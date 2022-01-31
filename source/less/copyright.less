@@ -1,16 +1,36 @@
 .copyright {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+  }
 }
 
 .copyright__link {
   display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .copyright__text {
   margin-right: 15px;
+  color: @black;
 }
 
 .copyright__link svg {
   fill: @main-red;
+}
+
+.copyright__link:hover svg {
+  @media (min-width: @desktop) {
+    fill: @bg-top;
+  }
+}
+
+.copyright__link:active svg {
+  fill: @bg-top;
+  opacity: 0.3;
 }

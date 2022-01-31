@@ -1,80 +1,117 @@
 .header-bottom--main {
   @media (min-width: @tablet) {
     background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 100%;
-    margin-top: 54px;
-    padding-bottom: 119px;
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/iphone-hand-tablet@2x.png");
+      background-size: 100%;
     }
   }
+
   @media (min-width: @desktop) {
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: 50% 100%;
-    padding-bottom: 130px;
-    margin-top: 98px;
+    background-position: 0 100%;
+    padding-bottom: 125px;
+    padding-top: 101px;
+    max-width: 900px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/iphone-hand-desktop@2x.png");
     }
   }
+
+  @media (min-resolution: 2dppx) and (min-width: @desktop) {}
+  @media (min-resolution: 2dppx) and (min-width: @tablet) {}
 }
 
 .header-bottom__wrapper {
-  padding-top: 29px;
-
   @media (min-width: @tablet) {
+    max-width: 300px;
     width: 50%;
-    text-align: left;
+    padding-top: 90px;
+    padding-bottom: 119px;
   }
 
   @media (min-width: @desktop) {
-    padding-top: 18px;
-    width: 50%;
     text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
-@media (max-width: @mobile-width-only) {
-  .header-bottom__hand {
+.header-bottom__hand {
+  @media (max-width: @mobile-width-only) {
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
-    background-position: 0 100%;
-    padding-bottom: 320px;
+    background-position: calc(50% - 40px) 100%;
+    padding-bottom: 315px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+      background-size: 260px;
+    }
   }
 }
 
 .header-bottom__title {
   margin: 0 auto;
-  &--simple {
-    margin: 36px 0 84px 0;
-  }
   max-width: 280px;
   font-weight: lighter;
   font-size: 24px;
   line-height: 120%;
   text-align: center;
 
+  @media (max-width: @mobile-width-only) {
+    margin-top: 29px;
+  }
+
   @media (min-width: @tablet) {
     font-size: 40px;
     line-height: 120%;
     max-width: 240px;
-
-      &--simple {
-      margin: 81px 0 143px 0;
-    }
   }
+
   @media (min-width: @desktop) {
     font-size: 50px;
     line-height: 68px;
+  }
+}
 
-    &--simple {
+.header-bottom__title--simple {
+  margin-top: 29px;
+  margin-bottom: 76px;
+  line-height: 33px;
 
-      margin: 74px 0 104px 0;
-    }
+  @media (min-width: @tablet) {
+    font-size: 50px;
+    line-height: 68px;
+    max-width: 620px;
+    font-weight: 300;
+    margin-top: 66px;
+    margin-bottom: 127px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 60px;
+    margin-bottom: 88px;
+    max-width: 940px;
+  }
+}
+
+.header-bottom__title--form {
+  margin-bottom: 43px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 88px;
   }
 }

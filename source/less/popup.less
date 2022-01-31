@@ -1,0 +1,124 @@
+.popup {
+  display: block;
+  background-color: @white;
+  position: fixed;
+  top: 20%;
+
+  &--send {
+    top: 60%;
+  }
+
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  border-radius: 5px;
+
+  @media (min-width: @tablet) {
+    width: 470px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 790px;
+  }
+}
+
+.popup-none {
+  display: none;
+}
+
+.popup__wrapper {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 38px;
+
+  &--error {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @tablet) {
+    max-width: 300px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 400px;
+  }
+}
+
+.popup__title {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.popup__text {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+  }
+}
+
+.popup__btn {
+  max-width: 280px;
+  width: 100%;
+  background-color: @main-green;
+  border: 2px solid @main-green;
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    max-width: 300px;
+  }
+
+  @media (min-width: @desktop) {
+    &:hover {
+      background-color: #1c9b5e;
+    }
+
+    &--send {
+      max-width: 460px;
+    }
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.popup__bg-btn {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &--send {
+    background-color: @bg-grey;
+    margin-top: 29px;
+  }
+
+  @media (min-width: @desktop) {
+    background-color: @bg-grey;
+    margin-top: 29px;
+    padding: 50px 20px;
+  }
+}

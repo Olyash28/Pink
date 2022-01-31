@@ -1,0 +1,56 @@
+.logo__svg {
+  fill: @white;
+
+  @media (max-width: @mobile-width-only) {
+    &--mobile {
+      display: block;
+    }
+
+    &--tablet,
+    &--desk {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile,
+    &--desk {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--desk {
+      display: block;
+    }
+
+    &--tablet,
+    &--mobile {
+      display: none;
+    }
+  }
+}
+
+.logo:hover {
+  @media (min-width: @desktop) {
+    &:not(.logo--main) {
+      .logo__svg--desk {
+        fill: @main-red;
+      }
+    }
+  }
+
+  &:active {
+    .logo__svg {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@media (min-width: @tablet) {
+  height: 60px;
+}

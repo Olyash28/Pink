@@ -1,81 +1,145 @@
 .table {
-  border-collapse: collapse;
-  margin-bottom: 45px;
-
-  @media (max-width: @mobile-width-only) {
-    min-width: 840px;
-    //overflow-x: scroll;
-  }
+  padding-top: 100px;
+  padding-bottom: 74px;
+  background-color: @bg-grey;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: contain;
 
   @media (min-width: @tablet) {
-    min-width: 620px;
+    padding-bottom: 60px;
   }
+
   @media (min-width: @desktop) {
-    min-width: 940px;
+    padding-top: 154px;
+    padding-bottom: 100px;
   }
 }
 
-.table__row {
-  position: relative;
-}
+.table__wrapper {
+  @media (min-width: @tablet) {
+    margin: 0 auto;
+    max-width: 620px;
+    width: 100%;
+  }
 
-.table__cell {
-  width: 276px;
-  height: 59px;
-  border: 2px solid #E5E5E5;
-  background-color: @white;
-  font-size: 14px;
-  line-height: 30px;
-  text-transform: uppercase;
-  text-align: center;
+  @media (min-width: @desktop) {
+    max-width: 940px;
+  }
 
   @media (max-width: @mobile-width-only) {
-    text-align: right;
+    overflow: scroll;
+    padding: 0 20px;
   }
+}
 
-  @media (min-width: @tablet) {
-    width: 152px;
-    height: 45px;
-    text-transform: none;
-  }
+.table__price {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 75px repeat(3, 45px);
+
   @media (min-width: @desktop) {
-    width: 233px;
-    font-size: 18px;
-    height: 59px;
+    grid-template-rows: 94px repeat(3, 59px);
   }
 
-  &--text {
-    text-align: left;
-    padding-left: 20px;
-
-    @media (max-width: @mobile-width-only) {
-      position: absolute;
-      background-color: transparent;
-      top: 0;
-      left: 0;
-    }
+  @media (max-width: @mobile-width-only) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 300%;
   }
 }
 
 .table__head {
   background-color: @bg-top;
-  border: 2px solid #E5E5E5;
-  width: 276px;
-  height: 94px;
-  text-align: center;
+  border: 2px solid @grey-form;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: @white;
   font-size: 16px;
   line-height: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: bold;
 
-  @media (min-width: @tablet) {
-    height: 75px;
+  .table__font-think {
+    font-weight: lighter;
   }
-  @media (min-width: @desktop) {
-    height: 94px;
+
+  &--hit {
+    position: relative;
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+
+    &::after {
+      position: absolute;
+      content: "ХИТ";
+      font-weight: normal;
+      font-size: 14px;
+      top: 13%;
+      left: 5%;
+      transform: rotate(-45deg);
+    }
+
+    @media (min-width: @tablet) and (max-width: 1199px) {
+      background-image: url("../img/bg-hit-tablet.svg");
+
+      &::after {
+        top: 8%;
+        left: 4%;
+      }
+    }
   }
 }
 
-.table__row .empty {
+.table__head--empty {
   background-color: transparent;
   border: transparent;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.table__cell {
+  border: 2px solid @grey-form;
+  background-color: @white;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 17px;
+
+  @media (max-width: @mobile-width-only) {
+    white-space: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 59px;
+  }
+
+  @media (min-width: @tablet) {
+    text-transform: none;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+  }
+
+  &--text {
+    align-items: center;
+    justify-content: left;
+
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+  }
+}
+
+.table__mobile-text {
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }

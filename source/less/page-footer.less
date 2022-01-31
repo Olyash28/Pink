@@ -19,7 +19,25 @@
     grid-template-columns: repeat(3, min-content);
     justify-content: space-between;
   }
+
   @media (min-width: @desktop) {
     max-width: 940px;
+    margin: 75px auto;
   }
+}
+
+.page-footer__logo {
+  fill: @bg-top;
+}
+
+.page-footer__logo:hover svg {
+  @media (min-width: @desktop) {
+    transition: 0.5s;
+    fill: @main-red;
+  }
+}
+
+.page-footer__logo:active svg {
+  fill: @bg-top;
+  opacity: 0.3;
 }

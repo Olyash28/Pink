@@ -9,7 +9,7 @@
 }
 
 .user-block__like {
-  margin-top: 25px;
+  margin-top: 12px;
   display: flex;
 
   @media (min-width: @tablet) {
@@ -42,9 +42,17 @@
   border: none;
   padding: 0;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (max-width: @mobile-width-only) {
     margin-right: 18px;
   }
+}
+
+.user-block__heart svg {
+  fill: @main-red;
 }
 
 .user-block__out {
@@ -69,12 +77,13 @@
     .user-block__like {
       justify-content: initial;
       margin-top: initial;
-
       order: -1;
     }
+
     .user-block__out {
-      margin-right: 18px;
+      margin-right: 16px;
     }
+
     .user-block__name {
       order: -1;
     }
