@@ -1,0 +1,145 @@
+.contacts {
+  background-color: @white;
+}
+
+.contacts__wrapper {
+  padding-top: 44px;
+  padding-bottom: 15px;
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    max-width: 620px;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    padding-bottom: 0;
+  }
+}
+
+.contacts__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet) {
+    font-size: 40px;
+    line-height: 54px;
+    padding-top: 44px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 50px;
+    line-height: 68px;
+    padding-top: 61px;
+    padding-bottom: 40px;
+  }
+}
+
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+.contacts__text {
+  margin: 0;
+  margin-bottom: 18px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__text--mail {
+  @media (min-width: @desktop) {
+    order: 2;
+  }
+}
+
+.contacts__link {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: @main-red;
+  text-decoration: none;
+  text-align: center;
+
+  @media (min-width: @desktop) {
+    padding-top: 20px;
+
+    &:hover {
+      color: @bg-top;
+    }
+  }
+
+  &:active {
+    color: @bg-top;
+    opacity: 0.3;
+  }
+}
+
+.contacts__map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 200px;
+}
+
+.contacts__bg-triangle {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+.contacts__bg-triangle svg {
+  width: 100%;
+  height: auto;
+}
+
+.contacts__map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
